@@ -1,0 +1,799 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    height: 0;
+}
+html,
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(233, 233, 233);
+
+
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+#mastHeadContainer {
+    height: 56px;
+    width: 100%;
+    padding: 7px 16px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    border-bottom: 1px solid #e8e8e8;
+    display: flex;
+    z-index: 10;
+    align-items: center;
+    border-bottom: 2px solid grey;
+}
+
+#mainContentContainer {
+    /* margin-top: 100px; */
+    margin-left: 4rem;
+    padding: 10px 0;
+    color: black;
+    /* display: flex; */
+    height: 100vh;
+    flex: 1;
+}
+
+.navShowHide {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    color: rgba(223, 219, 219, 0.918);
+}
+
+.navShowHide img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.logoContainer {
+    width: 140px;
+    margin: 0 40px 0 30px;
+    align-items: center;
+}
+
+.logoContainer img {
+    width: 150px;
+    height: 100%;
+    /* align-items: center; */
+}
+
+#mastHeadContainer {
+    padding: 10px 3px;
+}
+
+#mastHeadContainer .searchBarContainer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+#mastHeadContainer .searchBarContainer form {
+    flex: 1;
+    display: flex;
+}
+
+#mastHeadContainer .searchBarContainer .searchBar {
+    flex: 1;
+    max-width: 600px;
+    color: #111;
+    padding: 2px 8px;
+    font-size: 14px;
+    font-weight: 100;
+    border: 1px solid #ccc;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-right: none;
+    box-shadow: #eee 0px 1px 2px 0px inset;
+}
+
+
+.searchButton {
+    width: 65px;
+    background: rgb(245, 243, 243);
+    border: 0.5px solid rgb(209, 209, 209);
+}
+
+.searchButton img {
+    width: 30px;
+    height: 30px;
+    background: transparent;
+}
+
+#mastHeadContainer .rightIcon {
+    cursor: pointer;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    margin: 0 100px 0 0;
+    box-sizing: border-box;
+}
+
+#mastHeadContainer .rightIcon #profile{
+    padding: 5px;
+    border-radius: 100%;
+}
+
+#mastHeadContainer .rightIcon a img {
+    width: 20px;
+    margin: 0 15px;
+}
+
+#mastHeadContainer .rightIcon a .profileimg {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+.column {
+    flex: 1;
+    background-color: white;
+    min-height: 300px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px;
+}
+
+.sideNavContainer {
+    /* display: none; */
+    width: 4rem;
+    margin-top: 50px;
+    height: 95%;
+    background: #ffffff;
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    transition: ease-in;
+    flex-direction: column;
+    z-index: 20;
+    height: 92%;
+    overflow: hidden;
+}
+
+.sidebar-active{
+    width: 15rem;
+    margin-top: 50px;
+    height: 100vh;
+    /* background: #613737; */
+    /* padding-top: 56px; */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    transition: ease-out 0.2s;
+    /* display: block; */
+    flex-direction: column;
+    z-index: 20;
+}
+
+.active1{
+    display: none;
+}
+
+.active{
+    display: block;
+    width: 17rem;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.925);
+    position: absolute;
+    top: 0rem;
+    right: 5.5rem;
+    z-index: 20;
+    position: fixed;
+    color: white;
+    border: 1px solid grey;
+}
+
+.active ul li{
+    list-style: none;
+    padding: 1rem;
+}
+.active ul li a{
+    text-decoration: none;
+    color:white;
+}
+.loginNav{
+    position: relative;
+    top: 0;
+    height: 0;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+}
+.loginNav .loginNavImg img{
+    width: 44%;
+    margin: 1rem 2rem;
+}
+.loginNav .loginNavSignin{
+    height: 60px;
+    width: 15rem;
+    margin-top: 20px;
+}
+.loginNav .loginNavSignin a{
+    width: inherit;
+    color: white;
+    background-color: red;
+    padding: 6px 20px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 3px;
+    margin: 0;
+
+}
+
+.loginpage{
+    padding: 30px;
+    width: 60%;
+    height: fit-content;
+    margin: 0 auto;
+    padding: 30px 30px;
+    background-color: rgba(0, 0, 0, 0.671);
+}
+.loginpage input{
+    background-color: rgb(216, 216, 216);
+}
+
+.loginpage img{
+    width: 30%;
+}
+.sideNavContainer ul{
+    width: 100%;
+    height: inherit;
+}
+
+/* .sideNavContainer ul li{
+    width: 100%;
+    padding: 20px 0;
+    align-items: right;
+    text-align: right;
+} */
+
+.categoryNav{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+    height: 3.5rem;
+    width: 100%;
+    padding: 10px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    position: fixed;
+    z-index: 10;
+    background-color: white;
+    overflow: hidden;
+}
+.categoryNav ul{
+    margin-left: 4rem;
+    margin-top: 5px;
+    border-radius: 50px;
+    /* margin-left: 0; */
+    margin-top: 0;
+    padding-left: 10px;
+}
+
+.categoryNav ul li{
+    display: inline-block;
+    border-radius: 20px;
+    padding: 0.3rem 1rem;
+    /* background-color: rgb(187, 187, 187); */
+    background-color: #021E48;
+    margin: 5px 0;
+}
+
+.categoryNav ul li:hover{
+    background-color: #183a6d;
+}
+
+.categoryNav ul li a{
+    text-decoration: none;
+    color: white;
+
+}
+.videoContainer{
+    margin-top: 90px;
+    height: 80%;
+    display: flex;
+    /* position: fixed; */
+    justify-content: space-between;
+}
+
+.sideNavContainer .list{
+    padding: 10px 20px 10px 0;
+    overflow: hidden;
+    height: 5rem;
+}
+.sideNavContainer .list a{
+    padding: 15px;
+    text-decoration: none;
+    height: 5rem;
+    width: inherit;
+}
+.sideNavContainer .list a span{
+    margin-right: 30px;
+    width: 5rem;
+}
+.icon{
+
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    padding: 28px 18px 28px 18px;
+    /* margin: 14px 14px; */
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.card{
+    height: 250px;
+    transition: all 0.4s;
+    overflow: hidden;
+    transition-delay: 0ms, 6000ms;
+    border-radius: 13px 13px 0 0;
+}
+.card:hover{
+    transform: scale(1.2);
+    height: 280px;
+    /* height: 18rem;                                                                                                                                                                                                                                                                                                                                                                                                   */
+    z-index: 9;
+    cursor: pointer;
+}
+.card .cardBody{
+    height: inherit;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.925), rgba(0, 0, 0, 0.363), rgba(0, 0, 0, 0.89)), url("../images/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card .cardBody .cardContent{
+    /* justify-content: center; */
+    /* justify-items: center; */
+    margin: auto 0;
+    color: rgb(255, 255, 255);
+   
+}
+
+.sideNavTag{
+    font-size: 20px;
+    margin: 15px auto;
+    padding: 15px 15px 4px 15px;
+    text-decoration: none;
+}
+.sideNavContainer div span:hover{
+    background-color: rgba(221, 221, 221, 0.938);
+}
+.sideNavContainer div:hover{
+    background-color: rgba(221, 221, 221, 0.938);
+}
+.videoPageContainer{
+    margin: 55px 0 0 65px;
+    width: 94vw;
+    height: 100vh;
+    display: flex;
+    /* background-color: red; */
+    /* box-sizing: border-box; */
+
+}
+.video{
+    width: 100%;
+    height: 450px;
+    margin: 10px 0 0 0;
+    background-color: rgba(0, 0, 0, 0.966);
+}
+.videoNavBar{
+    width: 100%;
+    height: 70px;
+    border: 1px solid rgb(189, 189, 189);
+}
+.videoNavBar .videoicon{
+    padding: 10px 20px;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    margin: 2px 10px;
+    cursor: pointer;
+    font-size: 30px;
+}
+.videoNavBar .videoChannelProfile{
+    margin: 10px 20px;
+}
+.videoNavBar .subscribeButton{
+    display: inline-block;
+    text-decoration: none;
+    background-color: #021E48;
+    margin: 2px 20px;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 100px;
+}
+.videoNavBar .subscribeButton a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+}
+.videoNavBar div img{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    /* margin-left: 17rem; */
+    background-color: red;
+}
+.videoRightNav{
+    flex: 1;
+    height: 100vh;
+    /* background-color: red; */
+}
+.videoPageContainer .videoContainer{
+    flex: 2;
+    flex-direction: column;
+    margin-top: 0;
+    padding: 0 20px ;
+}
+
+.slidesVideo{
+    height: 140px;
+    width: 100%;
+    margin-top: 5px;
+    display: flex;
+    background-color: #000f25;
+}
+.slidesVideo img{
+    width: 12rem;
+    height: 100%;
+}
+.slidesVideo h6{
+    margin: 5px;
+    padding: 5px 8px;
+    color: white;
+}
+.slidesVideo p{
+    margin: 5px;
+    padding: 5px 8px;
+    color: white;
+}
+
+.slidesVideo .slidesVideoRightContainer{
+    height: 100%;
+    width: 15rem;
+}
+
+.videoContainer1 .container1{
+    margin-top: 70px;
+}
+
+.shortsDiv{
+    height: 490px;
+    width: 280px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 10px auto;
+    cursor: pointer;
+}
+.shortsDiv video{
+    padding: 0;
+}
+.shortsTitle{
+    height: 50px;
+    width: 280px;
+    overflow: hidden;
+    margin: 0 auto;
+    font: bold;
+    /* background-color: red; */
+}
+.shortsTitle h4{
+    font: bold;
+    font-size: 25px;
+    font-weight: 900;
+    text-shadow: 5px 5px 10px black;
+}
+
+.container1{
+    margin-top: 0.2rem;
+}
+
+
+.loginpage .loginForm{
+    display: flex;
+}
+.loginpage .titleDiscription{
+    color: white;
+    text-align: center;
+}
+.loginpage .titleDiscription h1{
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+.loginpage .loginForm .loginFormInput{
+    flex: 1;
+}
+.loginpage .loginForm .loginFormButton{
+    height: 3.6rem;
+    border-radius: none;
+}
+.loginpage .loginForm .loginFormButton button{
+    height: inherit;
+    border-radius: none;
+    border: none;
+    padding: 0 20px;
+    background-color: #e50914;
+    margin-left: 5px;
+    color: white;
+    border-radius: 5px;
+}
+
+.formContainer{
+    width: 100%;
+    height: 100vh; 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.925), rgba(0, 0, 0, 0.363), rgba(0, 0, 0, 0.89)), url("../images/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mainContentContainer .glass{
+    width:90%;
+    height:300px;
+    margin:100px auto 0 auto; 
+    display:flex;
+    justify-content:space-evenly;
+    background: linear-gradient(90deg,rgb(255, 47, 175) 40%,yellow,rgb(233, 233, 233));
+    border-radius: 15px;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 900px) {
+    .videoPageContainer{
+        display: block;
+        height: 40%;
+        width: 100%;
+        margin-left: 40px;
+    }
+    .videoPageContainer .videoContainer{
+        margin: 60px 0;
+        /* height: 40%; */
+        padding: 0 10px;
+        width: 100%;
+        display: flex;
+        /* margin: 0; */
+        justify-content: space-between;
+    }
+    .video{
+        width: 95%;
+        height: 250px;
+        margin: 10px 10px;
+        background-color: rgba(0, 0, 0, 0.966);
+    }
+
+
+    .loginpage{
+        width: 100%;
+        margin: 0 auto;
+        padding: 30px 10px;
+        /* margin-top: 100px; */
+        /* background-color: rgba(240, 240, 240, 0.856); */
+    }
+    
+    
+}
+
+
+
+@media only screen and (max-width: 580px) {
+    #mainContentContainer .glass{
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 490px) {
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    html, body {
+        height: 100vh;
+    }
+    #mastHeadContainer{
+        width: 100vw;
+   
+    }
+    #mastHeadContainer .searchBarContainer {
+        flex: none;
+        /* display: flex;
+        align-items: center; */
+    }
+    #mastHeadContainer .searchBarContainer form{
+        display: none;
+    }
+    .active1{
+        z-index: 40;
+    }
+    .categoryNav{
+        overflow: hidden;
+    }
+    .categoryNav ul li{
+        margin: 5px 0;
+    }
+    .sideNavContainer{
+        width: 0;
+    }
+    .sidebar-active{
+        width: 15rem;
+    }
+    #mainContentContainer {
+        margin-top: 10px;
+        margin-left: 0;
+        padding: 10px 0;
+        color: black;
+        /* display: flex; */
+        height: 100vh;
+        flex: 1;
+     
+    }
+    .videoContainer .container .row div{
+        padding: 0 !important; 
+    }
+    .logoContainer {
+        width: fit-content;
+        margin: 0 0 0 20px;
+        align-items: center;
+    }
+    
+    .logoContainer img {
+        width: 100px;
+        height: 100%;
+        margin: 0;
+        /* align-items: center; */
+    }
+    #mastHeadContainer .rightIcon {
+        cursor: pointer;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        margin-left: 50px;
+        box-sizing: border-box;
+        margin-right: 0 !important;
+        font-size: 14px;
+    }
+    #mastHeadContainer .rightIcon a input{
+        border-radius: 7px;
+    }
+    .videoPageContainer{
+        display: block;
+        height: 100%;
+        width: 100%;
+        margin-left: 0;
+    }
+    .videoPageContainer .videoContainer{
+      width: 100%;
+      padding: 0;
+      margin-bottom: 5px;
+    }
+    .videoPageContainer .videoContainer .video{
+        /* height: inherit; */
+        width: inherit;
+      margin: 0;
+    }
+    .slidesVideo{
+        width: 100% !important;
+    }
+    .slidesVideo .slidesVideoRightContainer{
+        height: 100%;
+        width: fit-content;
+        overflow: hidden;
+    }
+    .videoNavBar .videoicon{
+        padding: 0 5px;
+        display: inline-block;
+        text-decoration: none;
+        color: black;
+        margin: 0;
+        cursor: pointer;
+        font-size: 30px;
+    }
+    .videoNavBar .subscribeButton{
+        color: white;
+        margin: 20px 0;
+        margin-left: 20px;
+        border-radius: 100px;
+    }
+    .categoryNav ul{
+        margin-left: 0;
+        margin-top: 0;
+        padding-left: 10px;
+    }
+   .videoContainer1 .container1{
+       padding: 0;
+       margin-top: 0;
+       height: fit-content;
+       width: fit-content;
+    }
+     .videoContainer1 .container1 .shortsDiv{
+        /* margin: 10px; */
+        width: 100%;
+        height: 100vh;
+       border-radius: 0;
+       background-color: black;
+    }
+    .videoContainer1 .container1 .shortsTitle{
+        display: none;
+    }
+    .videoContainer1 .container1 .shortsDiv video{
+        width: 100%;
+        height: 100vh;
+        padding: 0;
+        margin: auto 0;
+    }
+
+    .loginpage .titleDiscription h1{
+        font-size: 38px;
+        color: white;
+        text-align: center;
+    }
+
+    .loginpage .loginForm{
+        display: block;
+    }
+
+    .card:active{
+        -webkit-transform: none;
+        transform: none;
+    }
+    .card:hover{
+        -webkit-transform: none;
+        transform: none;
+    }
+    .card{
+        -webkit-transform: none;
+        transform: none;
+        border-radius: 0;
+        border: none;
+    }
+    .active{
+        display: block;
+        width: 19rem;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.925);
+        position: absolute;
+        top: 0rem;
+        right: 3.5rem;
+        z-index: 20;
+        position: fixed;
+        color: white;
+        border: 1px solid grey;
+    }
+    #mastHeadContainer .rightIcon a .profileimg {
+        margin: 0;
+    }
+    
+
+  }
