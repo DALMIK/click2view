@@ -27,11 +27,15 @@ require_once("./includes/config.php")
     $userData = $account->userData($_COOKIE['true']);
     }
     ?>
+
     <div id="mainSectionContainer">
 
         <?php include "sideNav.php"; ?>
 
         <div class="videoPageContainer">
+            <!-- <div class="floatingDiv">
+
+            </div> -->
             <div class="videoContainer">
                 <div class="video">
                     <video style="width: 100%; height:100%; cursor:pointer;" controls autoplay>

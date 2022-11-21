@@ -68,7 +68,7 @@ require_once("./includes/classes/Account.php");
                         <div class=" col-sm col-xs-12 col-lg-3 col-md-4 col-sm-6 my-2">
                             <a style="text-decoration: none; color:black;"
                                 href="./video.php?id=<?=$data1['id']?>&vid=<?=$data1[0]?>">
-                                <div class="card">
+                                <div class="card homecard">
                                     <div style="overflow: hidden;">
                                         <img style="width:370px;height:250px"
                                             src="./upload/video_thumbnails/<?=$data1['image_name'] ?>"
@@ -88,9 +88,7 @@ require_once("./includes/classes/Account.php");
                                         </div>
 
                                     </div>
-                                    <button
-                                        style="border:none; margin:7px; padding:8px; height:15%; background-color:#021E48;color:white; border-radius:5px"
-                                        class="d-flex">
+                                    <button class="d-flex">
                                         <div style="padding: 0 5px 0 30px; width:40%">
                                             <span style="font-size: 25px;" class="material-symbols-outlined">
                                                 schedule
